@@ -1,10 +1,8 @@
 pipeline {
 
-agent any
-
-//  agent {
-//    label 'ansible'
-//  }
+ agent {
+   label 'ansible'
+ }
 
  stages {
 
@@ -15,6 +13,6 @@ agent any
    }
 
    }
-   
+
  }
 

@@ -41,7 +41,7 @@ pipeline {
 
          print abc
 
-}
+
 //          def new1() {
 //            print "hello"
 //          }
@@ -63,7 +63,7 @@ pipeline {
 //      steps {
 //        script {
 //          print "abc = ${abc}"
-//        }
+        }
      }
    }
 

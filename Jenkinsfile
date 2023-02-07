@@ -23,7 +23,7 @@
 
 @Library('roboshop') _
 
-env.abc = "Some Data"
+// env.abc = "Some Data"
 // test1.new1()
 
 pipeline {
@@ -32,7 +32,7 @@ pipeline {
    stage('test') {
      steps {
        script {
-         def.abc = "Hello"
+         env.abc = "Hello"
          def xyz = 10
 //          def x1 = true
 
@@ -41,6 +41,7 @@ pipeline {
 
          print abc
 
+}
 
 //          def new1() {
 //            print "hello"
@@ -52,17 +53,17 @@ pipeline {
 //
 //        }
 //
-//        script {
-//          print "abc = ${abc}"
-//        }
-//
-//      }
-//    }
-//
-//    stage('test2') {
-//      steps {
-//        script {
-//          print "abc = ${abc}"
+       script {
+         print "abc = ${abc}"
+       }
+
+     }
+   }
+
+   stage('test2') {
+     steps {
+       script {
+         print "abc = ${abc}"
         }
      }
    }

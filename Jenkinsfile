@@ -1,46 +1,46 @@
-pipeline {
-
- agent {
-   label 'ansible'
- }
-
- stages {
-
-   stage('Hello') {
-     steps {
-       echo 'Hello World'
-     }
-   }
-
-   }
-
- post {
-   always {
-     echo "sending email"
-   }
- }
- }
+// pipeline {
+//
+//  agent {
+//    label 'ansible'
+//  }
+//
+//  stages {
+//
+//    stage('Hello') {
+//      steps {
+//        echo 'Hello World'
+//      }
+//    }
+//
+//    }
+//
+//  post {
+//    always {
+//      echo "sending email"
+//    }
+//  }
+//  }
 
 @Library('roboshop') _
 
-env.abc = "Some Data"
-test1.new1()
+// env.abc = "Some Data"
+// test1.new1()
 
-//pipeline {
-//  agent any
-//  stages {
-//    stage('test') {
-//      steps {
-//        script {
-//          env.abc = "Hello"
-//          def xyz = 10
+pipeline {
+ agent any
+ stages {
+   stage('test') {
+     steps {
+       script {
+         def.abc = "Hello"
+         def xyz = 10
 //          def x1 = true
-//
-//          print "abc = ${abc}"
-//          print "xyz = ${xyz}"
-//
-//          print abc
-//
+
+         print "abc = ${abc}"
+         print "xyz = ${xyz}"
+
+         print abc
+
 //          def new1() {
 //            print "hello"
 //          }
@@ -63,9 +63,9 @@ test1.new1()
 //        script {
 //          print "abc = ${abc}"
 //        }
-//      }
-//    }
-//
-//  }
-//
-//}
+     }
+   }
+
+ }
+
+}
